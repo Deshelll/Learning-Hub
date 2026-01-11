@@ -1,0 +1,13 @@
+.svg {
+    fill: none;
+    stroke: #fff;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2px;
+    width: 24px;
+    height: 24px;
+}
+
+.svg__footer_icons {
+    fill: #9CA3AF;
+}

@@ -1,5 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Button } from './Button';
+import { PlayArrow } from '../../utils/svg/PlayArrow';
+import { RightArrow } from '../../utils/svg/RightArrow';
+import { Earth } from '../../utils/svg/Earth';
+import { Share } from '../../utils/svg/Share';
 
 const meta: Meta<typeof Button> = {
     title: 'UI/Button',
@@ -53,11 +57,16 @@ export const Variants: Story = {
 export const ButtonsInProject: Story = {
     render: () => {
         return (
-            <div style={{display: 'flex', gap: 10}}>
+            <div style={{display: 'flex', justifyContent: 'center', alignContent: 'center', gap: 10, flexWrap: 'wrap'}}>
                 <Button variant='primary' fontWeight='bold'>Начать обучение</Button>
                 <Button variant='outline' fontWeight='bold'>Смотреть рынки</Button>
                 <Button variant='ghost' fontWeight='bold'>Начать</Button>
                 <Button variant='danger' fontWeight='bold'>СБРОСИТЬ ПОРТФЕЛЬ</Button>
+                <Button variant='primary' shape='circle' iconOnly ><PlayArrow /></Button>
+                <Button variant='outline' shape='circle' iconOnly ><Earth /></Button>
+                <Button variant='outline' shape='circle' iconOnly ><Share /></Button>
+                <Button variant='primary' fontWeight='bold'>Создать портфель <RightArrow /></Button>
+                
             </div>
         )
     }
@@ -67,7 +76,7 @@ export const Shapes: Story = {
     render: () => {
         return (
             <div style={{display: 'flex', gap: 10}}>
-                <Button shape='circle'>111</Button>
+                <Button shape='circle' iconOnly><PlayArrow /></Button>
                 <Button shape='rounded'>Rounded</Button>
             </div>
         )

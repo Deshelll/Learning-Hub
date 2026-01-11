@@ -52,6 +52,11 @@ export const Button = ({
             {loading ? <span>Загрузка...</span> : null}
             {!loading && leftIcon ? <span className={clsx(styles.button__icon, styles.button__left)}>{leftIcon}</span> : null}
             {!loading && !iconOnly ? <span className={styles.button__label}>{children}</span> : null}
+            {!loading ? (
+                iconOnly 
+                ? <span className={styles.button__icon}>{children}</span>
+                : null
+            ) : null}
             {!loading && rightIcon ? <span className={clsx(styles.button__icon, styles.button__right)}>{rightIcon}</span> : null}
         </button>
     )
